@@ -78,6 +78,11 @@ export default function Home() {
             Ouvrir WedShoots
           </a>
         </div>
+        <br />
+        <p>
+          On vous partagera également un drive avec les photos de notre cher
+          photographe.
+        </p>
       </ModalInfo>
 
       <ModalInfo
@@ -89,9 +94,34 @@ export default function Home() {
         <br />
         <ul>
           <li>17:00 - Départ en bus de Villiers</li>
-          <li>18:00 - Cocktail</li>
-          <li>20:30 - Repas</li>
-          <li>04:00 - Dodo</li>
+          <li>
+            18:00 - Cocktail devant{" "}
+            <span>
+              <a
+                href="https://maps.app.goo.gl/QHL4smoV8NBFC6fA9"
+                target="_blank"
+              >
+                l'Olivia
+              </a>
+            </span>
+          </li>
+          <li>
+            20:30 - Repas dans{" "}
+            <span>
+              <a
+                href="https://maps.app.goo.gl/QHL4smoV8NBFC6fA9"
+                target="_blank"
+              >
+                l'Olivia
+              </a>
+            </span>
+          </li>
+          <li>
+            04:00 - Dodo chez vous{" "}
+            <span className="italic">
+              (ou à Villiers pour ceux qui sont loin)
+            </span>
+          </li>
         </ul>
         <br />
         <p>
@@ -107,12 +137,26 @@ export default function Home() {
         title="Lieu de la réception"
       >
         <p>
-          Nous avons affrété un bus au départ de Villiers. Vous pouvez aussi
-          venir en voiture et vous garer au parking de la gare de Lyon, ou vous
-          garer ailleurs et venir en transports.
+          Nous avons rendez-vous à{" "}
+          <span>
+            <a href="https://maps.app.goo.gl/QHL4smoV8NBFC6fA9" target="_blank">
+              l'Olivia
+            </a>
+          </span>{" "}
+          à 18h : péniche sur les quais en face de la gare d'Austerlitz.
+        </p>
+        <br />
+        <p>
+          Pour s'y rendre, nous avons affrété un bus au départ de Villiers -{" "}
+          <span className="font-bold">17:00 devant la MPT</span>.{" "}
+        </p>
+        <br />
+        <p>
+          Vous pouvez aussi venir en voiture et vous garer au parking de la gare
+          de Lyon, ou vous garer ailleurs et venir en transports.
         </p>
         <img src={transports} className="m-2 border-2 border-amber-950" />
-        <p>Le retour se fera par vos propres moyens : uber ou métro</p>
+        <p>Le retour se fera par vos propres moyens : uber, métro, ...</p>
         <div className="mt-4 text-center">
           <a
             href={LINKS.mapsLieu}
@@ -131,11 +175,23 @@ export default function Home() {
         title="Notre voyage de noces"
       >
         <p>
-          On a décidé de partir au <span>Costa-Rica</span> ! Cass veut du beau
-          temps et des paysages paradisiaque. Bog veut en profiter pour
-          apprendre le kitesurf. On a soif d'aventure, de partir découvrir la
-          jungle... mais en même temps de farnienter sur la plage avec un
-          cocktail.
+          On a décidé de partir au <span>Costa-Rica</span> !{" "}
+        </p>
+        <p>
+          Ce sera une fois que le bébé bretzel sera des nôtres, et assez grand
+          pour voyager bien sûr...
+        </p>
+        <br />
+        <p>
+          Cass veut du beau temps et des paysages paradisiaques. Bog veut en
+          profiter pour apprendre le kitesurf. On a soif d'aventure, de partir
+          découvrir la jungle... mais en même temps de farnienter sur la plage
+          avec un cocktail.
+        </p>
+        <bR />
+        <p>
+          Pas encore définitif, car on sera bientôt 3, mais c'est l'idée du
+          moment.
         </p>
         <img className="mt-4" src={costaRica} />
       </ModalInfo>
