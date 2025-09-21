@@ -1,1 +1,17 @@
 @import "tailwindcss";
+
+html,
+body,
+#root {
+  height: 100%;
+}
+* {
+  box-sizing: border-box;
+}
+
+/* Utilitaires viewport stables (mobile friendly) */
+:root {
+  --wheel-size: min(88svmin, 560px); /* diamètre roue */
+  --btn-size: calc(var(--wheel-size) * 0.22);
+  --radius: calc(var(--wheel-size) / 2 - var(--btn-size) / 2 - 8px);
+}

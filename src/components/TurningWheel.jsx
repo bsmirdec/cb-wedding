@@ -1,13 +1,25 @@
-import { useMotionValue, useAnimationFrame, motion } from "framer-motion";
+import {
+  useMotionValue,
+  useAnimationFrame,
+  motion,
+  motionValue,
+} from "framer-motion";
 import { createContext, useContext } from "react";
-
-import { ReactComponent as Logo } from "../assets/svgs/logo.svg";
+import Logo from "../assets/svgs/logo.svg";
 
 const RotationContext = createContext(null);
-export const useRotation = () => useContext(RotationContext);
+export function useRotation() {
+  const ctx = useContext(RotationContext);
+  if (!ctx) {
+    if (import.meta?.env?.DEV) {
+      console.warn("useRotation() utilisé en dehors de <TurningWheel>.");
+    }
+    return motionValue(0);
+  }
+  return ctx;
+}
 
 export default function TurningWheel({
-  size = 360,
   duration = 40,
   paused = false,
   children,
@@ -22,15 +34,15 @@ export default function TurningWheel({
 
   return (
     <div
-      className="relative mx-auto flex items-center justify-center"
-      style={{ width: size, height: size }}
+      className="absolute left-1/2 top-3/5 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center"
+      style={{ width: "var(--wheel-size)", height: "var(--wheel-size)" }}
     >
-      {/* Centre fixe svg */}
-      <div className="absolute inset-0 flex items-center justify-center text-center pointer-events-none">
-        <Logo className="w-40 h-auto text-emerald-600 stroke-amber-100" />
+      {/* Centre fixe : logo image (pas de changement de couleur) */}
+      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+        <img src={Logo} alt="Logo" className="w-40 h-auto select-none" />
       </div>
 
-      {/* Plateau qui tourne */}
+      {/* Plateau des boutons — tourne autour du centre */}
       <RotationContext.Provider value={rotation}>
         <motion.div
           className="absolute inset-0"

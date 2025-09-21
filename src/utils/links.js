@@ -1,9 +1,6 @@
 export const LINKS = {
-  wedshoots: "https://example.com/wedshoots", // ton lien album/app
-  cagnotte: "https://example.com/cagnotte", // Leetchi/Lydia/PayPal
-  mapsLieu: "https://maps.google.com/?q=Votre+Lieu",
-  parkings: [
-    { name: "Parking 1", url: "https://maps.google.com/?q=Parking+1" },
-    { name: "Parking 2", url: "https://maps.google.com/?q=Parking+2" },
-  ],
+  wedshoots:
+    "https://play.google.com/store/apps/details?id=net.bodas.android.wedshoots&pcampaignid=web_share", // ton lien album/app
+  cagnotte: "https://tribee.fr/participations/08HEGQMYMT8DVAF40R45NV20BE",
+  mapsLieu: "https://share.google/ewJ0l01RTxnhs8MJ8",
 };

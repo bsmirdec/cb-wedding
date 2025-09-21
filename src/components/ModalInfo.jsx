@@ -31,7 +31,7 @@ export default function ModalInfo({ open, onClose, title, children }) {
         className="fixed inset-0 z-50 flex items-center justify-center p-4"
       >
         <div
-          className="w-full max-w-md rounded-2xl bg-white text-gray-900 shadow-xl p-5 animate-none"
+          className="w-full max-w-md rounded-2xl bg-amber-100 text-gray-900 shadow-xl p-5 animate-none"
           // verrouille le layout pour éviter tout “pumping”
           style={{
             willChange: "auto",

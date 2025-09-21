@@ -11,9 +11,9 @@ export default function Welcome({ onEnter }) {
         <AnimatedWizzCat />
       </button>
 
-      <div className="absolute bottom-6 inset-x-0 text-center text-white/70 text-sm">
+      {/* <div className="absolute bottom-6 inset-x-0 text-center text-white/70 text-sm">
         Touchez le chat pour entrer
-      </div>
+      </div> */}
     </div>
   );
 }
